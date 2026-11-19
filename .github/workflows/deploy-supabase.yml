@@ -20,6 +20,6 @@ jobs:
       - name: Link project
         run: supabase link --project-ref "$PROJECT_ID"
       - name: Create tables, RLS, characters
-        run: supabase db push --linked
+        run: supabase db push --remote
       - name: Deploy Edge Functions
         run: supabase functions deploy
